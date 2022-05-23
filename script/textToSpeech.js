@@ -36,6 +36,8 @@ document.querySelector("#testVoice").addEventListener("click", () => {
 // speak function
 function speak(num) {
 
+    speech.voice = voices[4];
+
 
   //wait 2.5 seconds to wait for ding.mp3
   wait(2500);
