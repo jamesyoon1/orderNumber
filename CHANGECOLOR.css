@@ -1,0 +1,10 @@
+/* CHANGE BACKGROUND COLOR AND FONT COLOR */
+body {
+    /* CHANGE BACKGROUND COLOR  */
+    background: red;
+
+    /* CHANGE FONT COLOR */
+    color: white;
+}
+
+/* FOR THE LOGO, PLEASE HAVE THE CORRECT logo.png file in the same folder */

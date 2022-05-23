@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="../script/config.js"></script>
+</head>
+
+<body>
+    <div>
+        <div class="relative bg-sky-700 pb-32 overflow-hidden">
+
+
+            <!-- navbar with two menus, Settings (current) and order screen -->
+            <nav
+                class="bg-transparent relative z-10 border-b border-teal-500 border-opacity-25 lg:bg-transparent lg:border-none">
+                <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+                    <div class="relative h-16 flex items-center justify-between lg:border-b lg:border-sky-800">
+                        <div class="px-2 flex items-center lg:px-0">
+                            <!-- logo -->
+                            <div class="flex-shrink-0">
+                                <img class="block h-8 w-auto" src="../logo.png" alt="logo">
+                            </div>
+
+                            <div class="hidden lg:block lg:ml-6 lg:space-x-4">
+                                <div class="flex">
+
+                                    <a href="./Settingss.html"
+                                        class="bg-black bg-opacity-25 rounded-md py-2 px-3 text-sm font-medium text-white">Settings</a>
+                                    <!-- link back to the order screen -->
+                                    <a href="../index.html"
+                                        class="hover:bg-sky-800 rounded-md py-2 px-3 text-sm font-medium text-white">Back
+                                        To Order Screen</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+
+
+            <!-- decorative header background" -->
+            <div aria-hidden="true"
+                class="inset-y-0 absolute inset-x-0 left-1/2 transform -translate-x-1/2 w-full overflow-hidden lg:inset-y-0">
+                <div class="absolute inset-0 flex">
+                    <div class="h-full w-1/2" style="background-color: #0a527b"></div>
+                    <div class="h-full w-1/2" style="background-color: #065d8c"></div>
+                </div>
+                <div class="relative flex justify-center">
+                    <svg class="flex-shrink-0" width="1750" height="308" viewBox="0 0 1750 308"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M284.161 308H1465.84L875.001 182.413 284.161 308z" fill="#0369a1" />
+                        <path d="M1465.84 308L16.816 0H1750v308h-284.16z" fill="#065d8c" />
+                        <path d="M1733.19 0L284.161 308H0V0h1733.19z" fill="#0a527b" />
+                        <path d="M875.001 182.413L1733.19 0H16.816l858.185 182.413z" fill="#0a4f76" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- header that only contains Settings -->
+            <header class="relative py-10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-3xl font-bold text-white">Settings</h1>
+                </div>
+            </header>
+        </div>
+
+        <!-- main Settings portion -->
+        <main class="relative -mt-32">
+            <div class="max-w-screen-xl mx-auto pb-6 px-4 sm:px-6 lg:pb-16 lg:px-8">
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="divide-y divide-gray-200 lg:grid lg:grid-cols-12 lg:divide-y-0 lg:divide-x">
+                        <aside class="py-6 lg:col-span-3">
+                            <!-- side navbar, only contains Settings at the moment -->
+                            <nav class="space-y-1">
+                                <a href="#"
+                                    class="bg-teal-50 border-teal-500 text-teal-700 hover:bg-teal-50 hover:text-teal-700 group border-l-4 px-3 py-2 flex items-center text-sm font-medium"
+                                    aria-current="page">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                    </svg>
+                                    <span class="truncate"> Settings </span>
+                                </a>
+                            </nav>
+                        </aside>
+
+
+                        <!-- Settings forms -->
+                        <form class="divide-y divide-gray-200 lg:col-span-9" action="#" method="POST">
+                            <div class="py-6 px-4 sm:p-6 lg:pb-8">
+                                <!-- sub heading -->
+                                <div>
+                                    <h2 class="text-lg leading-6 font-medium text-gray-900">Settings</h2>
+                                    <p class="mt-1 text-sm text-gray-500">Make sure the fonts are visible! Test before!
+                                    </p>
+                                </div>
+
+                                <!-- change the message above the order number -->
+                                <div class="form-group">
+                                    <label for="messageAboveOrderNumber">Text above the order number</label>
+                                    <input class="form-control" id="messageAboveOrderNumber"
+                                        placeholder="default: 'your food is ready'">
+                                </div>
+
+                                <!-- change the speech after the order number -->
+                                <div class="form-group">
+                                    <label for="speechAfterOrderNumber">Speech after the order number</label>
+                                    <input class="form-control" id="speechAfterOrderNumber"
+                                        placeholder="default: 'your food is ready'">
+                                </div>
+
+                                <!-- voice choices, these will vary with different browsers -->
+                                <div class="form-group">
+                                    <label for="voices">Voices</label>
+                                    <select id="voices"
+                                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"></select>
+                                </div>
+
+                                <!-- testing the voices -->
+                                <button type="button" id="testVoice"
+                                class="inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-teal-700 hover:bg-teal-50 hover:text-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-50 mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                    </svg>
+                                    &nbsp;Try Voice
+                                </button>
+
+
+
+                                <!-- change background color -->
+                                <div>
+                                    <input type="color" id="head" name="head" value="#e66465">
+                                    <label for="head">&nbsp;Background Color</label>
+                                </div>
+
+                                <!-- change the font color -->
+                                <div>
+                                    <input type="color" id="body" name="body" value="#f6b73c">
+                                    <label for="body">&nbsp;Font Color</label>
+                                </div>
+
+                                <!-- updating creates a local json file -->
+                                <button type="button" onClick="generateJSON()"
+                                    class="inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-teal-700 hover:bg-teal-50 hover:text-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-50 mt-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    &nbsp;Update
+                                </button>
+
+
+                                
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+</body>
+
+<script src="../script/textToSpeech.js"></script>
+
+</html>

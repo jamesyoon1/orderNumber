@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Order System</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="index.css">
+
+
+    <!-- This CSS changes color for specific restaurants -->
+    <!-- please edit this file to change background colors, font colors, and font size -->
+    <link rel="stylesheet" href="CHANGECOLOR.css">
+
+</head>
+
+<body>
+    <div id="content" class="d-flex">
+        <div id="display-main" class="d-flex flex-column">
+
+            <!-- click on the logo to access settings -->
+            <a href="./src/settings.html">
+
+                <!-- Logo for the restaurant -->
+                <!-- please have the correct logo.png in the folder -->
+                <div><img id="logo" src="logo.png"></div>
+            </a>
+
+            <!-- Change to whatever the restaurant wants -->
+            <div id="messageAboveOrderNumber" class="ready-text mt-5">Your food is Ready</div> <span name="">&nbsp;</span>
+        </div>
+
+        <!-- INPUT FIELD, DON'T MODIFY -->
+        <div id="display-list" class="d-flex flex-column justify-content-between"> <span name="">&nbsp;</span> <span
+                name="">&nbsp;</span> <span name="">&nbsp;</span> <span name="">&nbsp;</span> <span
+                name="">&nbsp;</span></div> <input id="input" type="text" maxlength="3" required>
+    </div>
+
+</body>
+
+<!-- javascript for cookie management, etc -->
+<script src="./script/script.js"></script>
+
+<!-- javascript for text to speech function -->
+<script src="./script/textToSpeech.js"></script>
+
+</html>
+
+<script>
+    fetch("/script/config.json")
+        .then((response) => {
+            return response.json();
+        })
+        .then((jsondata) => {
+
+            //text above number
+            var dest = document.getElementById("messageAboveOrderNumber");
+            dest.innerHTML = jsondata.message;
+            //speech after
+            dest = document.getElementById("businessAddress");
+            dest.innerHTML = jsondata.address;
+
+
+
+        });
+</script>
